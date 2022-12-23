@@ -11,9 +11,10 @@ export default defineConfig({
   integrations: [svelte()],
   output: "server",
   adapter: node({
-	mode: 'standalone'
+    mode: 'standalone',
   }),
   server: {
-	port: Number(process.env.PORT)
+    port: Number(process.env.PORT),
+	host: true
   }
 });
